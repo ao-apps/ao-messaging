@@ -1,6 +1,6 @@
 /*
  * ao-messaging - Asynchronous bidirectional messaging over various protocols.
- * Copyright (C) 2014, 2015  AO Industries, Inc.
+ * Copyright (C) 2014, 2015, 2016  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -27,7 +27,7 @@ import com.aoindustries.io.CompressedDataOutputStream;
 import com.aoindustries.messaging.AbstractSocketContext;
 import com.aoindustries.security.Identifier;
 import com.aoindustries.util.concurrent.Callback;
-import com.aoindustries.util.concurrent.ExecutorService;
+import com.aoindustries.util.concurrent.Executors;
 import java.net.Socket;
 import java.net.SocketAddress;
 
@@ -47,7 +47,7 @@ public class TcpSocketClient extends AbstractSocketContext<TcpSocket> {
 
 	private static final int CONNECT_TIMEOUT = 15 * 1000;
 
-	private final ExecutorService executor = ExecutorService.newInstance();
+	private final Executors executors = new Executors();
 
 	public TcpSocketClient() {
 	}
@@ -57,7 +57,7 @@ public class TcpSocketClient extends AbstractSocketContext<TcpSocket> {
 		try {
 			super.close();
 		} finally {
-			executor.dispose();
+			executors.dispose();
 		}
 	}
 
@@ -69,7 +69,7 @@ public class TcpSocketClient extends AbstractSocketContext<TcpSocket> {
 		final Callback<? super TcpSocket> onConnect,
 		final Callback<? super Exception> onError
 	) {
-		executor.submitUnbounded(
+		executors.getUnbounded().submit(
 			new Runnable() {
 				@Override
 				public void run() {

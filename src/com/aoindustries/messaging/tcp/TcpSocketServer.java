@@ -1,6 +1,6 @@
 /*
  * ao-messaging - Asynchronous bidirectional messaging over various protocols.
- * Copyright (C) 2014, 2015  AO Industries, Inc.
+ * Copyright (C) 2014, 2015, 2016  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -27,7 +27,7 @@ import com.aoindustries.io.CompressedDataOutputStream;
 import com.aoindustries.messaging.AbstractSocketContext;
 import com.aoindustries.security.Identifier;
 import com.aoindustries.util.concurrent.Callback;
-import com.aoindustries.util.concurrent.ExecutorService;
+import com.aoindustries.util.concurrent.Executors;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -45,7 +45,7 @@ public class TcpSocketServer extends AbstractSocketContext<TcpSocket> {
 
 	private static final boolean TCP_NO_DELAY = true;
 
-	private final ExecutorService executor = ExecutorService.newInstance();
+	private final Executors executors = new Executors();
 
 	private final int port;
 	private final int backlog;
@@ -73,7 +73,7 @@ public class TcpSocketServer extends AbstractSocketContext<TcpSocket> {
 		try {
 			super.close();
 		} finally {
-			executor.dispose();
+			executors.dispose();
 		}
 	}
 
@@ -91,7 +91,7 @@ public class TcpSocketServer extends AbstractSocketContext<TcpSocket> {
 		if(isClosed()) throw new IllegalStateException("TcpSocketServer is closed");
 		synchronized(lock) {
 			if(serverSocket != null) throw new IllegalStateException();
-			executor.submitUnbounded(
+			executors.getUnbounded().submit(
 				new Runnable() {
 					@Override
 					public void run() {
@@ -102,7 +102,7 @@ public class TcpSocketServer extends AbstractSocketContext<TcpSocket> {
 								TcpSocketServer.this.serverSocket = newServerSocket;
 							}
 							// Handle incoming messages in a Thread, can try nio later
-							executor.submitUnbounded(
+							executors.getUnbounded().submit(
 								new Runnable() {
 									@Override
 									public void run() {

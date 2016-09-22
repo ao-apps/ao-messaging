@@ -1,6 +1,6 @@
 /*
  * ao-messaging - Asynchronous bidirectional messaging over various protocols.
- * Copyright (C) 2014, 2015  AO Industries, Inc.
+ * Copyright (C) 2014, 2015, 2016  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -33,7 +33,7 @@ import com.aoindustries.messaging.MessageType;
 import com.aoindustries.messaging.Socket;
 import com.aoindustries.security.Identifier;
 import com.aoindustries.util.concurrent.Callback;
-import com.aoindustries.util.concurrent.ExecutorService;
+import com.aoindustries.util.concurrent.Executors;
 import java.io.IOException;
 import java.net.SocketException;
 import java.util.ArrayList;
@@ -59,7 +59,7 @@ public class TcpSocket extends AbstractSocket {
 	private final Object sendQueueLock = new Object();
 	private Queue<Message> sendQueue;
 
-	private final ExecutorService executor = ExecutorService.newInstance();
+	private final Executors executors = new Executors();
 
 	private final Object lock = new Object();
 	private java.net.Socket socket;
@@ -100,7 +100,7 @@ public class TcpSocket extends AbstractSocket {
 					}
 				}
 			} finally {
-				executor.dispose();
+				executors.dispose();
 			}
 		}
 	}
@@ -117,7 +117,7 @@ public class TcpSocket extends AbstractSocket {
 	) throws IllegalStateException {
 		synchronized(lock) {
 			if(socket==null || in==null || out==null) throw new IllegalStateException();
-			executor.submitUnbounded(
+			executors.getUnbounded().submit(
 				new Runnable() {
 					@Override
 					public void run() {
@@ -130,7 +130,7 @@ public class TcpSocket extends AbstractSocket {
 								if(onError!=null) onError.call(new SocketException("Socket is closed"));
 							} else {
 								// Handle incoming messages in a Thread, can try nio later
-								executor.submitUnbounded(
+								executors.getUnbounded().submit(
 									new Runnable() {
 										@Override
 										public void run() {
@@ -200,7 +200,7 @@ public class TcpSocket extends AbstractSocket {
 				if(DEBUG) System.err.println("DEBUG: TcpSocket: sendMessagesImpl: submitting runnable");
 				// When the queue is first created, we submit the queue runner to the executor for queue processing
 				// There is only one executor per queue, and on queue per socket
-				executor.submitUnbounded(
+				executors.getUnbounded().submit(
 					new Runnable() {
 						@Override
 						public void run() {

@@ -1,6 +1,6 @@
 /*
  * ao-messaging - Asynchronous bidirectional messaging over various protocols.
- * Copyright (C) 2014, 2015  AO Industries, Inc.
+ * Copyright (C) 2014, 2015, 2016  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -31,7 +31,7 @@ import com.aoindustries.security.Identifier;
 import com.aoindustries.util.AtomicSequence;
 import com.aoindustries.util.Sequence;
 import com.aoindustries.util.concurrent.Callback;
-import com.aoindustries.util.concurrent.ExecutorService;
+import com.aoindustries.util.concurrent.Executors;
 import com.aoindustries.xml.XmlUtils;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -81,7 +81,7 @@ public class HttpSocket extends AbstractSocket {
 
 	private final Sequence outSeq = new AtomicSequence();
 
-	private final ExecutorService executor = ExecutorService.newInstance();
+	private final Executors executors = new Executors();
 
 	private final HttpSocketClient socketContext;
 	private final URL endpoint;
@@ -116,7 +116,7 @@ public class HttpSocket extends AbstractSocket {
 			}
 			logger.log(Level.FINE, "Notifying all on lock completed");
 			logger.log(Level.FINE, "Calling executor.dispose()");
-			executor.dispose();
+			executors.dispose();
 			logger.log(Level.FINE, "executor.dispose() finished");
 		}
 	}
@@ -131,7 +131,7 @@ public class HttpSocket extends AbstractSocket {
 		final Callback<? super Socket> onStart,
 		final Callback<? super Exception> onError
 	) throws IllegalStateException {
-		executor.submitUnbounded(
+		executors.getUnbounded().submit(
 			new Runnable() {
 				@Override
 				public void run() {
@@ -140,7 +140,7 @@ public class HttpSocket extends AbstractSocket {
 							if(onError!=null) onError.call(new SocketException("Socket is closed"));
 						} else {
 							// Handle incoming messages in a Thread, can try nio later
-							executor.submitUnbounded(
+							executors.getUnbounded().submit(
 								new Runnable() {
 									@Override
 									public void run() {
@@ -251,7 +251,7 @@ public class HttpSocket extends AbstractSocket {
 				if(DEBUG) System.err.println("DEBUG: HttpSocket: sendMessagesImpl: submitting runnable");
 				// When the queue is first created, we submit the queue runner to the executor for queue processing
 				// There is only one executor per queue, and on queue per socket
-				executor.submitUnbounded(
+				executors.getUnbounded().submit(
 					new Runnable() {
 						@Override
 						public void run() {
