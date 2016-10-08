@@ -193,6 +193,8 @@ abstract public class AbstractSocket implements Socket {
 				logger.log(Level.SEVERE, null, e);
 			} catch(InterruptedException e) {
 				logger.log(Level.SEVERE, null, e);
+				// Restore the interrupted status
+				Thread.currentThread().interrupt();
 			}
 		}
 		listenerManager.close();

@@ -180,6 +180,8 @@ abstract public class HttpSocketServlet extends HttpServlet {
 							outQueue.wait(timeRemaining);
 						} catch(InterruptedException e) {
 							logger.log(Level.WARNING, null, e);
+							// Restore the interrupted status
+							Thread.currentThread().interrupt();
 						}
 					}
 				} finally {

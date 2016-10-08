@@ -134,6 +134,8 @@ abstract public class AbstractSocketContext<S extends AbstractSocket> implements
 				logger.log(Level.SEVERE, null, e);
 			} catch(InterruptedException e) {
 				logger.log(Level.SEVERE, null, e);
+				// Restore the interrupted status
+				Thread.currentThread().interrupt();
 			}
 		}
 		listenerManager.close();
@@ -195,6 +197,8 @@ abstract public class AbstractSocketContext<S extends AbstractSocket> implements
 			logger.log(Level.SEVERE, null, e);
 		} catch(InterruptedException e) {
 			logger.log(Level.SEVERE, null, e);
+			// Restore the interrupted status
+			Thread.currentThread().interrupt();
 		}
 	}
 
