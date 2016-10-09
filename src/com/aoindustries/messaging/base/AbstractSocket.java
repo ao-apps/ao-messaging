@@ -1,6 +1,6 @@
 /*
  * ao-messaging - Asynchronous bidirectional messaging over various protocols.
- * Copyright (C) 2014, 2015  AO Industries, Inc.
+ * Copyright (C) 2014, 2015, 2016  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -20,8 +20,11 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with ao-messaging.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aoindustries.messaging;
+package com.aoindustries.messaging.base;
 
+import com.aoindustries.messaging.Message;
+import com.aoindustries.messaging.Socket;
+import com.aoindustries.messaging.SocketListener;
 import com.aoindustries.security.Identifier;
 import com.aoindustries.util.concurrent.Callback;
 import com.aoindustries.util.concurrent.ConcurrentListenerManager;

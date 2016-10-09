@@ -1,6 +1,6 @@
 /*
  * ao-messaging - Asynchronous bidirectional messaging over various protocols.
- * Copyright (C) 2014, 2015  AO Industries, Inc.
+ * Copyright (C) 2014, 2015, 2016  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695

@@ -1,6 +1,6 @@
 /*
  * ao-messaging - Asynchronous bidirectional messaging over various protocols.
- * Copyright (C) 2014, 2015  AO Industries, Inc.
+ * Copyright (C) 2014, 2015, 2016  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -99,7 +99,7 @@ public class MultiMessage implements Message {
 	}
 
 	private final Collection<? extends Message> messages;
-	
+
 	public MultiMessage(Collection<? extends Message> messages) {
 		this.messages = messages;
 	}
@@ -153,7 +153,7 @@ public class MultiMessage implements Message {
 	}
 
 	/**
-	 * Encodes the messages into a single ByteBuffer.
+	 * Encodes the messages into a single ByteArray.
 	 * There is likely a more efficient implementation that reads-through, but this
 	 * is a simple implementation.
 	 */
