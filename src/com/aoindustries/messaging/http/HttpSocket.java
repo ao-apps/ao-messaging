@@ -23,10 +23,10 @@
 package com.aoindustries.messaging.http;
 
 import com.aoindustries.io.AoByteArrayOutputStream;
-import com.aoindustries.messaging.AbstractSocket;
 import com.aoindustries.messaging.Message;
 import com.aoindustries.messaging.MessageType;
 import com.aoindustries.messaging.Socket;
+import com.aoindustries.messaging.base.AbstractSocket;
 import com.aoindustries.security.Identifier;
 import com.aoindustries.util.AtomicSequence;
 import com.aoindustries.util.Sequence;
@@ -71,7 +71,7 @@ public class HttpSocket extends AbstractSocket {
 	private static final int CONNECT_TIMEOUT = 15 * 1000;
 
 	/** Server should normally respond within 60 seconds even if no data coming back. */
-	static final int READ_TIMEOUT = 2 * 60 * 1000;
+	public static final int READ_TIMEOUT = 2 * 60 * 1000;
 
 	private final Map<Long,Message> inQueue = new HashMap<Long,Message>();
 	private long inSeq = 1; // Synchronized on inQueue
@@ -83,14 +83,14 @@ public class HttpSocket extends AbstractSocket {
 
 	private final Executors executors = new Executors();
 
-	private final HttpSocketClient socketContext;
+	private final HttpSocketContext socketContext;
 	private final URL endpoint;
 
 	/** The HttpURLConnection that is currently waiting for return traffic */
 	private HttpURLConnection receiveConn;
 
-	HttpSocket(
-		HttpSocketClient socketContext,
+	public HttpSocket(
+		HttpSocketContext socketContext,
 		Identifier id,
 		long connectTime,
 		URL endpoint

@@ -20,11 +20,12 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with ao-messaging.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aoindustries.messaging.tcp;
+package com.aoindustries.messaging.tcp.server;
 
 import com.aoindustries.io.CompressedDataInputStream;
 import com.aoindustries.io.CompressedDataOutputStream;
-import com.aoindustries.messaging.AbstractSocketContext;
+import com.aoindustries.messaging.base.AbstractSocketContext;
+import com.aoindustries.messaging.tcp.TcpSocket;
 import com.aoindustries.security.Identifier;
 import com.aoindustries.util.concurrent.Callback;
 import com.aoindustries.util.concurrent.Executors;
@@ -62,7 +63,7 @@ public class TcpSocketServer extends AbstractSocketContext<TcpSocket> {
 		this(port, backlog, null);
 	}
 
-    public TcpSocketServer(int port, int backlog, InetAddress bindAddr) {
+	public TcpSocketServer(int port, int backlog, InetAddress bindAddr) {
 		this.port = port;
 		this.backlog = backlog;
 		this.bindAddr = bindAddr;
@@ -80,7 +81,7 @@ public class TcpSocketServer extends AbstractSocketContext<TcpSocket> {
 	/**
 	 * Starts the I/O of a socket server.  After creation, a socket server does
 	 * not accept connections until started.  This allows listeners to be
-	 * registered between creationg and start call.
+	 * registered between creation and start call.
 	 * 
 	 * @throws IllegalStateException  if closed or already started
 	 */

@@ -20,10 +20,11 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with ao-messaging.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aoindustries.messaging.http;
+package com.aoindustries.messaging.http.client;
 
 import com.aoindustries.io.AoByteArrayOutputStream;
-import com.aoindustries.messaging.AbstractSocketContext;
+import com.aoindustries.messaging.http.HttpSocket;
+import com.aoindustries.messaging.http.HttpSocketContext;
 import com.aoindustries.security.Identifier;
 import com.aoindustries.util.concurrent.Callback;
 import com.aoindustries.util.concurrent.Executors;
@@ -33,13 +34,12 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 import org.w3c.dom.Element;
 
 /**
  * Client component for bi-directional messaging over HTTP.
  */
-public class HttpSocketClient extends AbstractSocketContext<HttpSocket> {
+public class HttpSocketClient extends HttpSocketContext {
 
 	private static final boolean DEBUG = false;
 
@@ -47,8 +47,6 @@ public class HttpSocketClient extends AbstractSocketContext<HttpSocket> {
 
 	private final Executors executors = new Executors();
 
-	final DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
-	
 	public HttpSocketClient() {
 	}
 

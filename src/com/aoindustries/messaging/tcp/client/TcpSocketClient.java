@@ -20,11 +20,12 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with ao-messaging.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aoindustries.messaging.tcp;
+package com.aoindustries.messaging.tcp.client;
 
 import com.aoindustries.io.CompressedDataInputStream;
 import com.aoindustries.io.CompressedDataOutputStream;
-import com.aoindustries.messaging.AbstractSocketContext;
+import com.aoindustries.messaging.base.AbstractSocketContext;
+import com.aoindustries.messaging.tcp.TcpSocket;
 import com.aoindustries.security.Identifier;
 import com.aoindustries.util.concurrent.Callback;
 import com.aoindustries.util.concurrent.Executors;

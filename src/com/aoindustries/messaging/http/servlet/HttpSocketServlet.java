@@ -1,6 +1,6 @@
 /*
  * ao-messaging - Asynchronous bidirectional messaging over various protocols.
- * Copyright (C) 2014, 2015  AO Industries, Inc.
+ * Copyright (C) 2014, 2015, 2016  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -20,15 +20,16 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with ao-messaging.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aoindustries.messaging.http;
+package com.aoindustries.messaging.http.servlet;
 
 import com.aoindustries.io.AoByteArrayOutputStream;
 import com.aoindustries.io.Encoder;
-import com.aoindustries.messaging.AbstractSocket;
-import com.aoindustries.messaging.AbstractSocketContext;
 import com.aoindustries.messaging.Message;
 import com.aoindustries.messaging.MessageType;
 import com.aoindustries.messaging.Socket;
+import com.aoindustries.messaging.base.AbstractSocket;
+import com.aoindustries.messaging.base.AbstractSocketContext;
+import com.aoindustries.messaging.http.HttpSocket;
 import com.aoindustries.nio.charset.Charsets;
 import com.aoindustries.security.Identifier;
 import com.aoindustries.util.concurrent.Callback;
@@ -71,7 +72,7 @@ abstract public class HttpSocketServlet extends HttpServlet {
 	private static final int LONG_POLL_TIMEOUT = HttpSocket.READ_TIMEOUT / 2;
 
 	public static class ServletSocket extends AbstractSocket {
-		
+
 		private final String serverName;
 
 		final Map<Long,Message> inQueue = new HashMap<Long,Message>();

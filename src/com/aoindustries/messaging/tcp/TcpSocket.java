@@ -25,12 +25,12 @@ package com.aoindustries.messaging.tcp;
 import com.aoindustries.io.CompressedDataInputStream;
 import com.aoindustries.io.CompressedDataOutputStream;
 import com.aoindustries.io.IoUtils;
-import com.aoindustries.messaging.AbstractSocket;
-import com.aoindustries.messaging.AbstractSocketContext;
 import com.aoindustries.messaging.ByteArray;
 import com.aoindustries.messaging.Message;
 import com.aoindustries.messaging.MessageType;
 import com.aoindustries.messaging.Socket;
+import com.aoindustries.messaging.base.AbstractSocket;
+import com.aoindustries.messaging.base.AbstractSocketContext;
 import com.aoindustries.security.Identifier;
 import com.aoindustries.util.concurrent.Callback;
 import com.aoindustries.util.concurrent.Executors;
@@ -66,7 +66,7 @@ public class TcpSocket extends AbstractSocket {
 	private CompressedDataInputStream in;
 	private CompressedDataOutputStream out;
 
-	TcpSocket(
+	public TcpSocket(
 		AbstractSocketContext<? extends AbstractSocket> socketContext,
 		Identifier id,
 		long connectTime,

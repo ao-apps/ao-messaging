@@ -20,43 +20,18 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with ao-messaging.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aoindustries.messaging;
+package com.aoindustries.messaging.http;
 
-import java.io.IOException;
-import java.security.SecureRandom;
-import java.util.Random;
-import org.junit.Test;
-import static org.junit.Assert.*;
+import com.aoindustries.messaging.base.AbstractSocketContext;
+import javax.xml.parsers.DocumentBuilderFactory;
 
-public class ByteArrayMessageTest {
+/**
+ * Bi-directional messaging over HTTP.
+ */
+abstract public class HttpSocketContext extends AbstractSocketContext<HttpSocket> {
 
-	public ByteArrayMessageTest() {
-	}
+	final protected DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
 
-	private static final Random random = new SecureRandom();
-
-	@Test
-	public void testEncodeAndDecode() throws IOException {
-		for(int i=0; i<100; i++) {
-			int len = random.nextInt(10000);
-			byte[] bytes = new byte[len + random.nextInt(10)];
-			random.nextBytes(bytes);
-
-			ByteArrayMessage original = new ByteArrayMessage(bytes);
-			try {
-				// Encode to String
-				String encodedString = original.encodeAsString();
-
-				// Decode back to message
-				ByteArrayMessage decoded = (ByteArrayMessage)MessageType.BYTE_ARRAY.decode(encodedString);
-				try {
-					assertEquals(original, decoded);
-				} finally {
-					decoded.close();
-				}
-			} finally {
-				original.close();
-			}
-		}
+	public HttpSocketContext() {
 	}
 }
