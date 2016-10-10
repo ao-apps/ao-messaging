@@ -264,6 +264,6 @@ along with ao-messaging.  If not, see <http://www.gnu.org/licenses />.
 		<module>ao-messaging-http-servlet</module>
 		<module>ao-messaging-tcp</module>
 		<module>ao-messaging-tcp-client</module>
-		<module>ao-messaging-tcp-servlet</module>
+		<module>ao-messaging-tcp-server</module>
 	</modules>
 </project>
