@@ -8,14 +8,14 @@ Parent POM for asynchronous bidirectional messaging over various protocols.
 
 ## Modules
 * [AO Messaging API](https://www.aoindustries.com/ao-messaging/api/)
-* [AO Messaging API](https://www.aoindustries.com/ao-messaging/base/)
-* [AO Messaging API](https://www.aoindustries.com/ao-messaging/http/)
-* [AO Messaging API](https://www.aoindustries.com/ao-messaging/http/client/)
-* [AO Messaging API](https://www.aoindustries.com/ao-messaging/http/client-js/)
-* [AO Messaging API](https://www.aoindustries.com/ao-messaging/http/servlet/)
-* [AO Messaging API](https://www.aoindustries.com/ao-messaging/tcp/)
-* [AO Messaging API](https://www.aoindustries.com/ao-messaging/tcp/client/)
-* [AO Messaging API](https://www.aoindustries.com/ao-messaging/tcp/servlet/)
+* [AO Messaging Base](https://www.aoindustries.com/ao-messaging/base/)
+* [AO Messaging HTTP](https://www.aoindustries.com/ao-messaging/http/)
+* [AO Messaging HTTP Client](https://www.aoindustries.com/ao-messaging/http/client/)
+* [AO Messaging HTTP Client JS](https://www.aoindustries.com/ao-messaging/http/client-js/)
+* [AO Messaging HTTP Servlet](https://www.aoindustries.com/ao-messaging/http/servlet/)
+* [AO Messaging TCP](https://www.aoindustries.com/ao-messaging/tcp/)
+* [AO Messaging TCP Client](https://www.aoindustries.com/ao-messaging/tcp/client/)
+* [AO Messaging TCP Server](https://www.aoindustries.com/ao-messaging/tcp/servlet/)
 
 ## Contact Us
 For questions or support, please [contact us](https://www.aoindustries.com/contact):
