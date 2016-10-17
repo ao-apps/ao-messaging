@@ -15,7 +15,7 @@ Parent POM for asynchronous bidirectional messaging over various protocols.
 * [AO Messaging HTTP Servlet](https://www.aoindustries.com/ao-messaging/http/servlet/)
 * [AO Messaging TCP](https://www.aoindustries.com/ao-messaging/tcp/)
 * [AO Messaging TCP Client](https://www.aoindustries.com/ao-messaging/tcp/client/)
-* [AO Messaging TCP Server](https://www.aoindustries.com/ao-messaging/tcp/servlet/)
+* [AO Messaging TCP Server](https://www.aoindustries.com/ao-messaging/tcp/server/)
 
 ## Contact Us
 For questions or support, please [contact us](https://www.aoindustries.com/contact):
