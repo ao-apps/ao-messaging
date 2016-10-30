@@ -3,6 +3,7 @@ Parent POM for asynchronous bidirectional messaging over various protocols.
 
 ## Project Links
 * [Project Home](https://www.aoindustries.com/ao-messaging/)
+* [Changelog](https://www.aoindustries.com/ao-messaging/changelog)
 * [Maven Central Repository](https://search.maven.org/#search%7Cgav%7C1%7Cg:%22com.aoindustries%22%20AND%20a:%22ao-messaging%22)
 * [GitHub](https://github.com/aoindustries/ao-messaging)
 
