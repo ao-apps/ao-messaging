@@ -25,3 +25,30 @@
 [submodule "ao-messaging-tcp-server"]
 	path = ao-messaging-tcp-server
 	url = git@github.com:aoindustries/ao-messaging-tcp-server.git
+[submodule "api"]
+	path = api
+	url = git@github.com:aoindustries/ao-messaging-api.git
+[submodule "base"]
+	path = base
+	url = git@github.com:aoindustries/ao-messaging-base.git
+[submodule "http"]
+	path = http
+	url = git@github.com:aoindustries/ao-messaging-http.git
+[submodule "http-client"]
+	path = http-client
+	url = git@github.com:aoindustries/ao-messaging-http-client.git
+[submodule "http-client-js"]
+	path = http-client-js
+	url = git@github.com:aoindustries/ao-messaging-http-client-js.git
+[submodule "http-servlet"]
+	path = http-servlet
+	url = git@github.com:aoindustries/ao-messaging-http-servlet.git
+[submodule "tcp"]
+	path = tcp
+	url = git@github.com:aoindustries/ao-messaging-tcp.git
+[submodule "tcp-server"]
+	path = tcp-server
+	url = git@github.com:aoindustries/ao-messaging-tcp-server.git
+[submodule "tcp-client"]
+	path = tcp-client
+	url = git@github.com:aoindustries/ao-messaging-tcp-client.git
