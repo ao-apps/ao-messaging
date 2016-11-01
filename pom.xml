@@ -55,14 +55,14 @@ along with ao-messaging.  If not, see <http://www.gnu.org/licenses />.
 	</scm>
 
 	<modules>
-		<module>ao-messaging-api</module>
-		<module>ao-messaging-base</module>
-		<module>ao-messaging-http</module>
-		<module>ao-messaging-http-client</module>
-		<module>ao-messaging-http-client-js</module>
-		<module>ao-messaging-http-servlet</module>
-		<module>ao-messaging-tcp</module>
-		<module>ao-messaging-tcp-client</module>
-		<module>ao-messaging-tcp-server</module>
+		<module>api</module>
+		<module>base</module>
+		<module>http</module>
+		<module>http-client</module>
+		<module>http-client-js</module>
+		<module>http-servlet</module>
+		<module>tcp</module>
+		<module>tcp-client</module>
+		<module>tcp-server</module>
 	</modules>
 </project>
