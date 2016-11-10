@@ -42,7 +42,7 @@ along with ao-messaging.  If not, see <http://www.gnu.org/licenses />.
 	</properties>
 
 	<name>AO Messaging</name>
-	<url>https://aoindustries.com${bookPath}/</url><!-- Can't inherit due to multi-module -->
+	<url>https://aoindustries.com/${project.artifactId}/</url>
 	<description>Parent POM for asynchronous bidirectional messaging over various protocols.</description>
 	<inceptionYear>2014</inceptionYear>
 
@@ -55,14 +55,24 @@ along with ao-messaging.  If not, see <http://www.gnu.org/licenses />.
 	</scm>
 
 	<modules>
+		<module>book</module>
 		<module>api</module>
+		<module>api/book</module>
 		<module>base</module>
+		<module>base/book</module>
 		<module>http</module>
+		<module>http/book</module>
 		<module>http-client</module>
+		<module>http-client/book</module>
 		<module>http-client-js</module>
+		<module>http-client-js/book</module>
 		<module>http-servlet</module>
+		<module>http-servlet/book</module>
 		<module>tcp</module>
+		<module>tcp/book</module>
 		<module>tcp-client</module>
+		<module>tcp-client/book</module>
 		<module>tcp-server</module>
+		<module>tcp-server/book</module>
 	</modules>
 </project>
