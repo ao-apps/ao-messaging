@@ -1,5 +1,5 @@
 # [<img src="ao-logo.png" alt="AO Logo" width="35" height="40">](https://aoindustries.com/) [AO Messaging](https://aoindustries.com/ao-messaging/)
-Parent POM for asynchronous bidirectional messaging over various protocols.
+Aggregator POM for asynchronous bidirectional messaging over various protocols.
 
 ## Project Links
 * [Project Home](https://aoindustries.com/ao-messaging/)

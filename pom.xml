@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-ao-messaging - Parent POM for asynchronous bidirectional messaging over various protocols.
+ao-messaging - Aggregator POM for asynchronous bidirectional messaging over various protocols.
 Copyright (C) 2016  AO Industries, Inc.
     support@aoindustries.com
     7262 Bull Pen Cir
@@ -36,14 +36,9 @@ along with ao-messaging.  If not, see <http://www.gnu.org/licenses />.
 	<version>1.0.2-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<properties>
-		<javadoc.breadcrumbs><![CDATA[<a target="_top" href="${project.parent.url}">${project.parent.name}</a>
-/ <a target="_top" href="${project.url}">${shortTitle}</a>]]></javadoc.breadcrumbs>
-	</properties>
-
 	<name>AO Messaging</name>
-	<url>https://aoindustries.com/${project.artifactId}/</url>
-	<description>Parent POM for asynchronous bidirectional messaging over various protocols.</description>
+	<url>https://aoindustries.com/ao-messaging/</url>
+	<description>Aggregator POM for asynchronous bidirectional messaging over various protocols.</description>
 	<inceptionYear>2014</inceptionYear>
 
 	<scm>
