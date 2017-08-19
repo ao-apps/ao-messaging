@@ -37,7 +37,7 @@ along with ao-messaging.  If not, see <http://www.gnu.org/licenses />.
 		shortTitle="Changelog"
 		tocLevels="1"
 		datePublished="2016-10-29T20:34:33-0500"
-		dateModified="2017-08-09T04:02:13-0500"
+		dateModified="2017-08-19T18:06:54-0500"
 	>
 		<!-- The current snapshot, unreleased version -->
 		<c:set var="version" value="@{com.aoindustries:ao-messaging:pom.version}" />
@@ -59,6 +59,12 @@ along with ao-messaging.  If not, see <http://www.gnu.org/licenses />.
 						in favor of new <ao:a href="https://aoindustries.com/ao-tempfiles/apidocs/com/aoindustries/tempfiles/TempFileContext.html">TempFileContext</ao:a>
 						that does not suffer from a memory leak in long-running applications.
 					</li>
+					<li>New callback to check for session identifier availability.</li>
+					<li>New version of <core:link book="/ao-messaging/api" page="/index.jspx" />.</li>
+					<li>New version of <core:link book="/ao-messaging/base" page="/index.jspx" />.</li>
+					<li>New version of <core:link book="/ao-messaging/http" page="/index.jspx" />.</li>
+					<li>New version of <core:link book="/ao-messaging/http/servlet" page="/index.jspx" />.</li>
+					<li>New version of <core:link book="/ao-messaging/tcp" page="/index.jspx" />.</li>
 				</ul>
 			</changelog:release>
 		</c:if>
