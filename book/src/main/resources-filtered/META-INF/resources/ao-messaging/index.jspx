@@ -35,11 +35,11 @@ along with ao-messaging.  If not, see <http://www.gnu.org/licenses />.
 		datePublished="2016-10-16T22:58:00-0500"
 		dateModified="2017-07-18T09:08:34-0500"
 	>
-		<core:child page="changelog.jspx" />
-		<core:child book="/ao-messaging/api" page="/index.jspx" />
-		<core:child book="/ao-messaging/base" page="/index.jspx" />
-		<core:child book="/ao-messaging/http" page="/index.jspx" />
-		<core:child book="/ao-messaging/tcp" page="/index.jspx" />
+		<core:child page="changelog" />
+		<core:child book="/ao-messaging/api" page="/" />
+		<core:child book="/ao-messaging/base" page="/" />
+		<core:child book="/ao-messaging/http" page="/" />
+		<core:child book="/ao-messaging/tcp" page="/" />
 		<ao:include
 			page="/ao-badges/badges.inc.jspx"
 			arg.projectStatus="${currentPage.property.projectStatus}"
@@ -53,23 +53,23 @@ along with ao-messaging.  If not, see <http://www.gnu.org/licenses />.
 		</p>
 		<section:section label="Project Links">
 			<ul>
-				<li><core:link page="index.jspx">Project Home</core:link></li>
-				<li><core:link page="changelog.jspx">Changelog</core:link></li>
+				<li><core:link page="/">Project Home</core:link></li>
+				<li><core:link page="changelog">Changelog</core:link></li>
 				<li><ao:a href="https://search.maven.org/#search%7Cgav%7C1%7Cg:%22@{documented.groupId}%22%20AND%20a:%22@{documented.artifactId}%22">Maven Central Repository</ao:a></li>
 				<li><ao:a href="@{documented.scm.url}">GitHub</ao:a></li>
 			</ul>
 		</section:section>
 		<section:section label="Modules">
 			<ul>
-				<li><core:link book="/ao-messaging/api" page="/index.jspx" /></li>
-				<li><core:link book="/ao-messaging/base" page="/index.jspx" /></li>
-				<li><core:link book="/ao-messaging/http" page="/index.jspx" /></li>
-				<li><core:link book="/ao-messaging/http/client" page="/index.jspx" /></li>
-				<li><core:link book="/ao-messaging/http/client-js" page="/index.jspx" /></li>
-				<li><core:link book="/ao-messaging/http/servlet" page="/index.jspx" /></li>
-				<li><core:link book="/ao-messaging/tcp" page="/index.jspx" /></li>
-				<li><core:link book="/ao-messaging/tcp/client" page="/index.jspx" /></li>
-				<li><core:link book="/ao-messaging/tcp/server" page="/index.jspx" /></li>
+				<li><core:link book="/ao-messaging/api" page="/" /></li>
+				<li><core:link book="/ao-messaging/base" page="/" /></li>
+				<li><core:link book="/ao-messaging/http" page="/" /></li>
+				<li><core:link book="/ao-messaging/http/client" page="/" /></li>
+				<li><core:link book="/ao-messaging/http/client-js" page="/" /></li>
+				<li><core:link book="/ao-messaging/http/servlet" page="/" /></li>
+				<li><core:link book="/ao-messaging/tcp" page="/" /></li>
+				<li><core:link book="/ao-messaging/tcp/client" page="/" /></li>
+				<li><core:link book="/ao-messaging/tcp/server" page="/" /></li>
 			</ul>
 		</section:section>
 	</core:page>
