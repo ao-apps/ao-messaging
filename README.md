@@ -1,4 +1,4 @@
-# [<img src="ao-logo.png" alt="AO Logo" width="35" height="40">](https://aoindustries.com/) [AO Messaging](https://aoindustries.com/ao-messaging/)
+# [<img src="ao-logo.png" alt="AO Logo" width="35" height="40">](https://github.com/aoindustries) [AO Messaging](https://github.com/aoindustries/ao-messaging)
 <p>
 	<a href="https://aoindustries.com/life-cycle#project-current-stable">
 		<img src="https://aoindustries.com/ao-badges/project-current-stable.svg" alt="project: current stable" />
@@ -27,15 +27,15 @@ Aggregator POM for asynchronous bidirectional messaging over various protocols.
 * [GitHub](https://github.com/aoindustries/ao-messaging)
 
 ## Modules
-* [AO Messaging API](https://aoindustries.com/ao-messaging/api/)
-* [AO Messaging Base](https://aoindustries.com/ao-messaging/base/)
-* [AO Messaging HTTP](https://aoindustries.com/ao-messaging/http/)
-* [AO Messaging HTTP Client](https://aoindustries.com/ao-messaging/http/client/)
-* [AO Messaging HTTP Client JS](https://aoindustries.com/ao-messaging/http/client-js/)
-* [AO Messaging HTTP Servlet](https://aoindustries.com/ao-messaging/http/servlet/)
-* [AO Messaging TCP](https://aoindustries.com/ao-messaging/tcp/)
-* [AO Messaging TCP Client](https://aoindustries.com/ao-messaging/tcp/client/)
-* [AO Messaging TCP Server](https://aoindustries.com/ao-messaging/tcp/server/)
+* [AO Messaging API](https://github.com/aoindustries/ao-messaging-api)
+* [AO Messaging Base](https://github.com/aoindustries/ao-messaging-base)
+* [AO Messaging HTTP](https://github.com/aoindustries/ao-messaging-http)
+* [AO Messaging HTTP Client](https://github.com/aoindustries/ao-messaging-http-client)
+* [AO Messaging HTTP Client JS](https://github.com/aoindustries/ao-messaging-http-client-js)
+* [AO Messaging HTTP Servlet](https://github.com/aoindustries/ao-messaging-http-servlet)
+* [AO Messaging TCP](https://github.com/aoindustries/ao-messaging-tcp)
+* [AO Messaging TCP Client](https://github.com/aoindustries/ao-messaging-tcp-client)
+* [AO Messaging TCP Server](https://github.com/aoindustries/ao-messaging-tcp-server)
 
 ## Contact Us
 For questions or support, please [contact us](https://aoindustries.com/contact):
