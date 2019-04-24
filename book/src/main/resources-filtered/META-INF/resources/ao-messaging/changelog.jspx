@@ -37,7 +37,7 @@ along with ao-messaging.  If not, see <http://www.gnu.org/licenses />.
 		shortTitle="Changelog"
 		tocLevels="1"
 		datePublished="2016-10-29T20:34:33-0500"
-		dateModified="2017-08-19T18:06:54-0500"
+		dateModified="2019-04-24T18:12:24-0500"
 	>
 		<!-- The current snapshot, unreleased version -->
 		<c:set var="version" value="@{com.aoindustries:ao-messaging:pom.version}" />
@@ -54,6 +54,8 @@ along with ao-messaging.  If not, see <http://www.gnu.org/licenses />.
 				scmUrl="@{documented.scm.url}"
 			>
 				<ul>
+					<li>Updated version of <core:link book="/ao-oss-parent" page="/index.jspx" />.</li>
+					<li>Minimum Java version changed from 1.6 to 1.7.</li>
 					<li>
 						Deprecated uses of <ao:a rel="nofollow" href="@{javac.link.javaApi}java/io/File#deleteOnExit()">File.deleteOnExit()</ao:a>
 						in favor of new <ao:a href="https://aoindustries.com/ao-tempfiles/apidocs/com/aoindustries/tempfiles/TempFileContext.html">TempFileContext</ao:a>
