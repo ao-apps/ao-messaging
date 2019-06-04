@@ -29,7 +29,7 @@ along with ao-messaging.  If not, see <http://www.gnu.org/licenses />.
 		<relativePath>../ao-oss-parent/pom.xml</relativePath>
 	</parent>
 
-	<groupId>com.aoindustries</groupId><artifactId>ao-messaging</artifactId><version>1.1.0-validation-SNAPSHOT</version>
+	<groupId>com.aoindustries</groupId><artifactId>ao-messaging</artifactId><version>1.1.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>AO Messaging</name>
@@ -47,6 +47,10 @@ along with ao-messaging.  If not, see <http://www.gnu.org/licenses />.
 
 	<modules>
 		<module>book</module>
+		<!-- TODO
+		<module>bom</module>
+		<module>bom/book</module>
+		-->
 		<module>api</module>
 		<module>api/book</module>
 		<module>base</module>
