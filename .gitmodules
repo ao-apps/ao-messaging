@@ -25,3 +25,6 @@
 [submodule "tcp-client"]
 	path = tcp-client
 	url = git@github.com:aoindustries/ao-messaging-tcp-client.git
+[submodule "bom"]
+	path = bom
+	url = git@aoindustries.github.com:aoindustries/ao-messaging-bom.git
