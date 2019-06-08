@@ -47,10 +47,8 @@ along with ao-messaging.  If not, see <http://www.gnu.org/licenses />.
 
 	<modules>
 		<module>book</module>
-		<!-- TODO
 		<module>bom</module>
 		<module>bom/book</module>
-		-->
 		<module>api</module>
 		<module>api/book</module>
 		<module>base</module>
