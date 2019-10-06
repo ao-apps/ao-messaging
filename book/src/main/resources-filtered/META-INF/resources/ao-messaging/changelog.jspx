@@ -36,7 +36,7 @@ along with ao-messaging.  If not, see <http://www.gnu.org/licenses />.
 		shortTitle="Changelog"
 		tocLevels="1"
 		datePublished="2016-10-29T20:34:33-0500"
-		dateModified="2019-08-17T01:30:28-0500"
+		dateModified="2019-10-05T20:41:56-0500"
 	>
 		<!-- The current snapshot, unreleased version -->
 		<c:set var="version" value="@{com.aoindustries:ao-messaging:pom.version}" />
@@ -51,18 +51,27 @@ along with ao-messaging.  If not, see <http://www.gnu.org/licenses />.
 				groupId="@{documented.groupId}"
 				artifactId="@{documented.artifactId}"
 				scmUrl="@{documented.scm.url}"
-			>
-				<ul>
-					<li>Updated version of <core:link book="/ao-messaging/bom" page="/index.jspx" />.</li>
-					<li>Updated version of <core:link book="/ao-messaging/api" page="/index.jspx" />.</li>
-					<li>Updated version of <core:link book="/ao-messaging/http" page="/index.jspx" />.</li>
-					<li>Updated version of <core:link book="/ao-messaging/http/servlet" page="/index.jspx" />.</li>
-					<li>Updated version of <core:link book="/ao-messaging/tcp" page="/index.jspx" />.</li>
-					<li>Updated version of <core:link book="/ao-messaging/tcp/client" page="/index.jspx" />.</li>
-					<li>Updated version of <core:link book="/ao-messaging/tcp/server" page="/index.jspx" />.</li>
-				</ul>
-			</changelog:release>
+			/>
 		</c:if>
+
+		<changelog:release
+			projectName="@{documented.name}"
+			version="1.2.0"
+			datePublished="2019-10-05T20:41:56-0500"
+			groupId="@{documented.groupId}"
+			artifactId="@{documented.artifactId}"
+			scmUrl="@{documented.scm.url}"
+		>
+			<ul>
+				<li>Updated version of <core:link book="/ao-messaging/bom" page="/index.jspx" />.</li>
+				<li>Updated version of <core:link book="/ao-messaging/api" page="/index.jspx" />.</li>
+				<li>Updated version of <core:link book="/ao-messaging/http" page="/index.jspx" />.</li>
+				<li>Updated version of <core:link book="/ao-messaging/http/servlet" page="/index.jspx" />.</li>
+				<li>Updated version of <core:link book="/ao-messaging/tcp" page="/index.jspx" />.</li>
+				<li>Updated version of <core:link book="/ao-messaging/tcp/client" page="/index.jspx" />.</li>
+				<li>Updated version of <core:link book="/ao-messaging/tcp/server" page="/index.jspx" />.</li>
+			</ul>
+		</changelog:release>
 
 		<changelog:release
 			projectName="@{documented.name}"
