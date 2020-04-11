@@ -1,3 +1,7 @@
+[submodule "bom"]
+	path = bom
+	url = git@github.com:aoindustries/ao-messaging-bom.git
+	branch = .
 [submodule "api"]
 	path = api
 	url = git@github.com:aoindustries/ao-messaging-api.git
@@ -33,8 +37,4 @@
 [submodule "tcp-client"]
 	path = tcp-client
 	url = git@github.com:aoindustries/ao-messaging-tcp-client.git
-	branch = .
-[submodule "bom"]
-	path = bom
-	url = git@aoindustries.github.com:aoindustries/ao-messaging-bom.git
 	branch = .
