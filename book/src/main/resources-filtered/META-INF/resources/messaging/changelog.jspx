@@ -37,7 +37,7 @@ along with ao-messaging.  If not, see <http://www.gnu.org/licenses />.
 		shortTitle="Changelog"
 		tocLevels="1"
 		datePublished="2016-10-29T20:34:33-05:00"
-		dateModified="2021-06-03T22:53:21-05:00"
+		dateModified="2021-06-27T16:13:41-05:00"
 	>
 		<c:if test="${fn:endsWith('@{project.version}', '-SNAPSHOT') and !fn:endsWith('@{project.version}', '-POST-SNAPSHOT')}">
 			<changelog:release
@@ -50,7 +50,7 @@ along with ao-messaging.  If not, see <http://www.gnu.org/licenses />.
 			>
 				<ul>
 					<li>Updated to <ao:a rel="nofollow" href="https://www.oracle.com/java/technologies/javaee/javaeetechnologies.html#javaee7">Java™ EE 7 Web Profile</ao:a> (Servlet 3.1, JSP 2.3, EL 3.0, and JSTL 1.2).</li>
-					<li>Minimum Java version changed from 1.8 to 11.</li>
+					<li>Now supports Java 9+ modules.</li>
 					<li>Maven artifact relocated from <code>com.aoindustries:ao-messaging</code> to <code>com.aoapps:ao-messaging</code>.</li>
 					<li>Packages renamed from <code>com.aoindustries.messaging.*</code> to <code>com.aoapps.messaging.*</code>.</li>
 				</ul>
@@ -159,8 +159,8 @@ along with ao-messaging.  If not, see <http://www.gnu.org/licenses />.
 				<li>Updated version of <core:link book="/parent" page="/index.jspx" />.</li>
 				<li>Minimum Java version changed from 1.6 to 1.7.</li>
 				<li>
-					Deprecated uses of <ao:a rel="nofollow" href="@{javadoc.link.javase}java/io/File#deleteOnExit()">File.deleteOnExit()</ao:a>
-					in favor of new <ao:a href="https://oss.aoapps.com/tempfiles/apidocs/com/aoapps/tempfiles/TempFileContext.html">TempFileContext</ao:a>
+					Deprecated uses of <ao:a rel="nofollow" href="@{javadoc.link.javase}java.base/java/io/File#deleteOnExit()">File.deleteOnExit()</ao:a>
+					in favor of new <ao:a href="https://oss.aoapps.com/tempfiles/apidocs/com.aoapps.tempfiles/com/aoapps/tempfiles/TempFileContext.html">TempFileContext</ao:a>
 					that does not suffer from a memory leak in long-running applications.
 				</li>
 				<li>New callback to check for session identifier availability.</li>
