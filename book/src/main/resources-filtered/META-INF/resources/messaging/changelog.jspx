@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 ao-messaging - Aggregator POM for asynchronous bidirectional messaging over various protocols.
-Copyright (C) 2016, 2017, 2019, 2020, 2021  AO Industries, Inc.
+Copyright (C) 2016, 2017, 2019, 2020, 2021, 2022  AO Industries, Inc.
     support@aoindustries.com
     7262 Bull Pen Cir
     Mobile, AL 36695
@@ -47,12 +47,21 @@ along with ao-messaging.  If not, see <https://www.gnu.org/licenses/>.
 				artifactId="@{documented.artifactId}"
 				repository="@{nexusUrl}content/repositories/snapshots/"
 				scmUrl="@{project.scm.url}"
-			>
-				<ul>
-					<li>Now properly restoring Thread interrupted state on <code>InterruptedException</code>.</li>
-				</ul>
-			</changelog:release>
+			/>
 		</c:if>
+
+		<changelog:release
+			projectName="@{documented.name}"
+			version="3.0.2"
+			datePublished="2022-02-17T00:50:39-06:00"
+			groupId="@{project.groupId}"
+			artifactId="@{documented.artifactId}"
+			scmUrl="@{project.scm.url}"
+		>
+			<ul>
+				<li>Now properly restoring Thread interrupted state on <code>InterruptedException</code>.</li>
+			</ul>
+		</changelog:release>
 
 		<changelog:release
 			projectName="@{documented.name}"
