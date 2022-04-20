@@ -1,40 +1,40 @@
 [submodule "bom"]
-	path = bom
-	url = git@github.com:ao-apps/ao-messaging-bom.git
-	branch = .
+  path = bom
+  url = git@github.com:ao-apps/ao-messaging-bom.git
+  branch = .
 [submodule "api"]
-	path = api
-	url = git@github.com:ao-apps/ao-messaging-api.git
-	branch = .
+  path = api
+  url = git@github.com:ao-apps/ao-messaging-api.git
+  branch = .
 [submodule "base"]
-	path = base
-	url = git@github.com:ao-apps/ao-messaging-base.git
-	branch = .
+  path = base
+  url = git@github.com:ao-apps/ao-messaging-base.git
+  branch = .
 [submodule "http"]
-	path = http
-	url = git@github.com:ao-apps/ao-messaging-http.git
-	branch = .
+  path = http
+  url = git@github.com:ao-apps/ao-messaging-http.git
+  branch = .
 [submodule "http-client"]
-	path = http-client
-	url = git@github.com:ao-apps/ao-messaging-http-client.git
-	branch = .
+  path = http-client
+  url = git@github.com:ao-apps/ao-messaging-http-client.git
+  branch = .
 [submodule "http-client-js"]
-	path = http-client-js
-	url = git@github.com:ao-apps/ao-messaging-http-client-js.git
-	branch = .
+  path = http-client-js
+  url = git@github.com:ao-apps/ao-messaging-http-client-js.git
+  branch = .
 [submodule "http-servlet"]
-	path = http-servlet
-	url = git@github.com:ao-apps/ao-messaging-http-servlet.git
-	branch = .
+  path = http-servlet
+  url = git@github.com:ao-apps/ao-messaging-http-servlet.git
+  branch = .
 [submodule "tcp"]
-	path = tcp
-	url = git@github.com:ao-apps/ao-messaging-tcp.git
-	branch = .
+  path = tcp
+  url = git@github.com:ao-apps/ao-messaging-tcp.git
+  branch = .
 [submodule "tcp-server"]
-	path = tcp-server
-	url = git@github.com:ao-apps/ao-messaging-tcp-server.git
-	branch = .
+  path = tcp-server
+  url = git@github.com:ao-apps/ao-messaging-tcp-server.git
+  branch = .
 [submodule "tcp-client"]
-	path = tcp-client
-	url = git@github.com:ao-apps/ao-messaging-tcp-client.git
-	branch = .
+  path = tcp-client
+  url = git@github.com:ao-apps/ao-messaging-tcp-client.git
+  branch = .
