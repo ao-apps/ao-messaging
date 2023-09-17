@@ -32,6 +32,11 @@ along with ao-messaging.  If not, see <https://www.gnu.org/licenses/>.
   <groupId>com.aoapps</groupId><artifactId>ao-messaging</artifactId><version>3.1.0-POST-SNAPSHOT</version>
   <packaging>pom</packaging>
 
+  <properties>
+    <!-- Must be set to ${git.commit.time} for snapshots or ISO 8601 timestamp for releases. -->
+    <project.build.outputTimestamp>${git.commit.time}</project.build.outputTimestamp>
+  </properties>
+
   <name>AO Messaging</name>
   <url>https://oss.aoapps.com/messaging/</url>
   <description>Aggregator POM for asynchronous bidirectional messaging over various protocols.</description>
