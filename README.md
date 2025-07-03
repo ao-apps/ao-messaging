@@ -19,7 +19,7 @@ Aggregator POM for asynchronous bidirectional messaging over various protocols.
 ## Project Links
 * [Project Home](https://oss.aoapps.com/messaging/)
 * [Changelog](https://oss.aoapps.com/messaging/changelog)
-* [Maven Central Repository](https://central.sonatype.com/artifact/com.aoapps/ao-messaging)
+* [Central Repository](https://central.sonatype.com/artifact/com.aoapps/ao-messaging)
 * [GitHub](https://github.com/ao-apps/ao-messaging)
 
 ## Modules
