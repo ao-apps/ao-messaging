@@ -119,6 +119,8 @@ along with ao-messaging.  If not, see <https://www.gnu.org/licenses/>.
     <module>http-client-js/book</module>
     <module>http-servlet</module>
     <module>http-servlet/book</module>
+    <module>http-servlet-javaee</module>
+    <module>http-servlet-javaee/book</module>
     <module>tcp</module>
     <module>tcp/book</module>
     <module>tcp-client</module>

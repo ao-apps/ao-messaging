@@ -25,6 +25,10 @@
 [submodule "http-servlet"]
   path = http-servlet
   url = git@github.com:ao-apps/ao-messaging-http-servlet.git
+  branch = jakartaee
+[submodule "http-servlet-javaee"]
+  path = http-servlet-javaee
+  url = git@github.com:ao-apps/ao-messaging-http-servlet.git
   branch = javaee
 [submodule "tcp"]
   path = tcp
