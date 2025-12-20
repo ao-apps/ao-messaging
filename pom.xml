@@ -103,29 +103,54 @@ along with ao-messaging.  If not, see <https://www.gnu.org/licenses/>.
     </repository>
   </repositories>
 
+  <profiles>
+    <profile>
+      <id>jakartaee</id>
+      <activation>
+        <property>
+          <name>jakartaee.skip</name>
+          <value>!true</value>
+        </property>
+      </activation>
+      <modules>
+        <module>http-servlet</module>
+        <module>http-servlet/book</module>
+      </modules>
+    </profile>
+    <profile>
+      <id>javaee</id>
+      <activation>
+        <property>
+          <name>javaee.skip</name>
+          <value>!true</value>
+        </property>
+      </activation>
+      <modules>
+        <module>book</module>
+        <module>bom/book</module>
+        <module>api/book</module>
+        <module>base/book</module>
+        <module>http/book</module>
+        <module>http-client/book</module>
+        <module>http-client-js/book</module>
+        <module>http-servlet-javaee</module>
+        <module>http-servlet-javaee/book</module>
+        <module>tcp/book</module>
+        <module>tcp-client/book</module>
+        <module>tcp-server/book</module>
+      </modules>
+    </profile>
+  </profiles>
+
   <modules>
-    <module>book</module>
     <module>bom</module>
-    <module>bom/book</module>
     <module>api</module>
-    <module>api/book</module>
     <module>base</module>
-    <module>base/book</module>
     <module>http</module>
-    <module>http/book</module>
     <module>http-client</module>
-    <module>http-client/book</module>
     <module>http-client-js</module>
-    <module>http-client-js/book</module>
-    <module>http-servlet</module>
-    <module>http-servlet/book</module>
-    <module>http-servlet-javaee</module>
-    <module>http-servlet-javaee/book</module>
     <module>tcp</module>
-    <module>tcp/book</module>
     <module>tcp-client</module>
-    <module>tcp-client/book</module>
     <module>tcp-server</module>
-    <module>tcp-server/book</module>
   </modules>
 </project>
