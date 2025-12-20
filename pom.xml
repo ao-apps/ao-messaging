@@ -113,8 +113,18 @@ along with ao-messaging.  If not, see <https://www.gnu.org/licenses/>.
         </property>
       </activation>
       <modules>
+        <module>book</module>
+        <module>bom/book</module>
+        <module>api/book</module>
+        <module>base/book</module>
+        <module>http/book</module>
+        <module>http-client/book</module>
+        <module>http-client-js/book</module>
         <module>http-servlet</module>
         <module>http-servlet/book</module>
+        <module>tcp/book</module>
+        <module>tcp-client/book</module>
+        <module>tcp-server/book</module>
       </modules>
     </profile>
     <profile>
@@ -126,18 +136,18 @@ along with ao-messaging.  If not, see <https://www.gnu.org/licenses/>.
         </property>
       </activation>
       <modules>
-        <module>book</module>
-        <module>bom/book</module>
-        <module>api/book</module>
-        <module>base/book</module>
-        <module>http/book</module>
-        <module>http-client/book</module>
-        <module>http-client-js/book</module>
+        <module>book-javaee</module>
+        <module>bom/book-javaee</module>
+        <module>api/book-javaee</module>
+        <module>base/book-javaee</module>
+        <module>http/book-javaee</module>
+        <module>http-client/book-javaee</module>
+        <module>http-client-js/book-javaee</module>
         <module>http-servlet-javaee</module>
         <module>http-servlet-javaee/book</module>
-        <module>tcp/book</module>
-        <module>tcp-client/book</module>
-        <module>tcp-server/book</module>
+        <module>tcp/book-javaee</module>
+        <module>tcp-client/book-javaee</module>
+        <module>tcp-server/book-javaee</module>
       </modules>
     </profile>
   </profiles>
