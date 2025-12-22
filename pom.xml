@@ -103,30 +103,19 @@ along with ao-messaging.  If not, see <https://www.gnu.org/licenses/>.
     </repository>
   </repositories>
 
+  <modules>
+    <module>bom</module>
+    <module>api</module>
+    <module>base</module>
+    <module>http</module>
+    <module>http-client</module>
+    <module>http-client-js</module>
+    <module>tcp</module>
+    <module>tcp-client</module>
+    <module>tcp-server</module>
+  </modules>
+
   <profiles>
-    <profile>
-      <id>jakartaee</id>
-      <activation>
-        <property>
-          <name>jakartaee.skip</name>
-          <value>!true</value>
-        </property>
-      </activation>
-      <modules>
-        <module>book</module>
-        <module>bom/book</module>
-        <module>api/book</module>
-        <module>base/book</module>
-        <module>http/book</module>
-        <module>http-client/book</module>
-        <module>http-client-js/book</module>
-        <module>http-servlet</module>
-        <module>http-servlet/book</module>
-        <module>tcp/book</module>
-        <module>tcp-client/book</module>
-        <module>tcp-server/book</module>
-      </modules>
-    </profile>
     <profile>
       <id>javaee</id>
       <activation>
@@ -150,17 +139,28 @@ along with ao-messaging.  If not, see <https://www.gnu.org/licenses/>.
         <module>tcp-server/book-javaee</module>
       </modules>
     </profile>
+    <profile>
+      <id>jakartaee</id>
+      <activation>
+        <property>
+          <name>jakartaee.skip</name>
+          <value>!true</value>
+        </property>
+      </activation>
+      <modules>
+        <module>book</module>
+        <module>bom/book</module>
+        <module>api/book</module>
+        <module>base/book</module>
+        <module>http/book</module>
+        <module>http-client/book</module>
+        <module>http-client-js/book</module>
+        <module>http-servlet</module>
+        <module>http-servlet/book</module>
+        <module>tcp/book</module>
+        <module>tcp-client/book</module>
+        <module>tcp-server/book</module>
+      </modules>
+    </profile>
   </profiles>
-
-  <modules>
-    <module>bom</module>
-    <module>api</module>
-    <module>base</module>
-    <module>http</module>
-    <module>http-client</module>
-    <module>http-client-js</module>
-    <module>tcp</module>
-    <module>tcp-client</module>
-    <module>tcp-server</module>
-  </modules>
 </project>
