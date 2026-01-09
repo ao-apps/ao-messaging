@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 ao-messaging - Aggregator POM for asynchronous bidirectional messaging over various protocols.
-Copyright (C) 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025  AO Industries, Inc.
+Copyright (C) 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026  AO Industries, Inc.
     support@aoindustries.com
     7262 Bull Pen Cir
     Mobile, AL 36695
@@ -125,18 +125,7 @@ along with ao-messaging.  If not, see <https://www.gnu.org/licenses/>.
         </property>
       </activation>
       <modules>
-        <module>book-javaee</module>
-        <module>bom/book-javaee</module>
-        <module>api/book-javaee</module>
-        <module>base/book-javaee</module>
-        <module>http/book-javaee</module>
-        <module>http-client/book-javaee</module>
-        <module>http-client-js/book-javaee</module>
         <module>http-servlet-javaee</module>
-        <module>http-servlet-javaee/book</module>
-        <module>tcp/book-javaee</module>
-        <module>tcp-client/book-javaee</module>
-        <module>tcp-server/book-javaee</module>
       </modules>
     </profile>
     <profile>
