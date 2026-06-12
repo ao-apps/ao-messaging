@@ -117,18 +117,6 @@ along with ao-messaging.  If not, see <https://www.gnu.org/licenses/>.
 
   <profiles>
     <profile>
-      <id>javaee</id>
-      <activation>
-        <property>
-          <name>javaee.skip</name>
-          <value>!true</value>
-        </property>
-      </activation>
-      <modules>
-        <module>http-servlet-javaee</module>
-      </modules>
-    </profile>
-    <profile>
       <id>jakartaee</id>
       <activation>
         <property>
